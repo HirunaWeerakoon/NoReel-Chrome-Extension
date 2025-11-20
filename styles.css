@@ -1,0 +1,31 @@
+/* --- YOUTUBE --- */
+
+/* 1. Hide the "Shorts" button in the left sidebar */
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
+    display: none !important;
+}
+
+/* 2. Hide the "Shorts" row on the Home Page */
+ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]) {
+    display: none !important;
+}
+
+/* 3. Hide Shorts in Search Results */
+ytd-reel-shelf-renderer {
+    display: none !important;
+}
+
+/* --- INSTAGRAM --- */
+
+/* 4. Hide the Reels icon in the sidebar */
+a[href="/reels/"] {
+    display: none !important;
+}
+
+/* --- FACEBOOK --- */
+
+/* Note: JS is usually needed for Facebook, but this catches some cases */
+div[aria-label="Reels"] {
+    display: none !important;
+}
