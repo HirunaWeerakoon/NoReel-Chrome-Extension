@@ -1,31 +1,32 @@
 /* --- YOUTUBE --- */
 
+/* Note the added "body.focus-mode-active" before every selector */
+
 /* 1. Hide the "Shorts" button in the left sidebar */
-ytd-guide-entry-renderer:has(a[title="Shorts"]),
-ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
+body.focus-mode-active ytd-guide-entry-renderer:has(a[title="Shorts"]),
+body.focus-mode-active ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
     display: none !important;
 }
 
 /* 2. Hide the "Shorts" row on the Home Page */
-ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]) {
+body.focus-mode-active ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]) {
     display: none !important;
 }
 
 /* 3. Hide Shorts in Search Results */
-ytd-reel-shelf-renderer {
+body.focus-mode-active ytd-reel-shelf-renderer {
     display: none !important;
 }
 
 /* --- INSTAGRAM --- */
 
 /* 4. Hide the Reels icon in the sidebar */
-a[href="/reels/"] {
+body.focus-mode-active a[href="/reels/"] {
     display: none !important;
 }
 
 /* --- FACEBOOK --- */
 
-/* Note: JS is usually needed for Facebook, but this catches some cases */
-div[aria-label="Reels"] {
+body.focus-mode-active div[aria-label="Reels"] {
     display: none !important;
 }
